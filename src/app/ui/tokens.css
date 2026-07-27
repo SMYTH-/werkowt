@@ -1,0 +1,159 @@
+:root {
+    /* ---- Neutrals (warm-cool ink on warm paper) ---- */
+    --paper: #FBFBF9;           /* app background */
+    --paper-sunk: #F4F4F0;      /* recessed wells, table stripes */
+    --white: #FFFFFF;
+  
+    --ink-950: #101316;         /* max contrast headings */
+    --ink-900: #171B1F;         /* default text */
+    --ink-700: #363C44;         /* strong secondary */
+    --ink-500: #656D77;         /* muted / captions */
+    --ink-400: #8A9099;         /* placeholder / disabled text */
+    --ink-300: #B7BCC2;         /* icons on light, dividers-strong */
+  
+    --line-200: #E7E7E1;        /* default border */
+    --line-100: #EFEFEA;        /* subtle divider */
+  
+    /* ---- Brand: Jade (primary accent) ---- */
+    --jade-50:  #ECF6F1;
+    --jade-100: #D3EBE0;
+    --jade-200: #A6D6C1;
+    --jade-300: #6FBB9C;
+    --jade-500: #157A54;        /* brand primary */
+    --jade-600: #106345;        /* hover */
+    --jade-700: #0C4E36;        /* pressed / deep */
+    --jade-900: #08301F;        /* on-dark surfaces */
+  
+    /* ---- Warm sand (secondary / editorial highlight) ---- */
+    --sand-100: #F3EEE4;
+    --sand-300: #E4D8C2;
+    --sand-500: #C7A876;
+  
+    /* ---- Semantic hues ---- */
+    --green-500: #157A54;
+    --amber-500: #C07C12;
+    --amber-100: #F6EAD1;
+    --red-500:   #C8443B;
+    --red-100:   #F7E0DD;
+    --blue-500:  #2C63C4;
+    --blue-100:  #DEE7F8;
+  
+    /* ---- Semantic aliases ---- */
+    --bg-app: var(--paper);
+    --bg-sunk: var(--paper-sunk);
+    --surface-card: var(--white);
+    --surface-raised: var(--white);
+    --surface-inverse: var(--ink-950);
+  
+    --text-strong: var(--ink-950);
+    --text-body: var(--ink-900);
+    --text-muted: var(--ink-500);
+    --text-subtle: var(--ink-400);
+    --text-on-brand: #FFFFFF;
+    --text-on-inverse: #F4F4F0;
+    --text-link: var(--jade-600);
+  
+    --border-default: var(--line-200);
+    --border-subtle: var(--line-100);
+    --border-strong: var(--ink-300);
+    --border-focus: var(--jade-500);
+  
+    --brand: var(--jade-500);
+    --brand-hover: var(--jade-600);
+    --brand-pressed: var(--jade-700);
+    --brand-tint: var(--jade-50);
+  
+    --success: var(--green-500);
+    --success-tint: var(--jade-50);
+    --warning: var(--amber-500);
+    --warning-tint: var(--amber-100);
+    --danger: var(--red-500);
+    --danger-tint: var(--red-100);
+    --info: var(--blue-500);
+    --info-tint: var(--blue-100);
+  
+    --focus-ring: color-mix(in srgb, var(--jade-500) 40%, transparent);
+  }
+  
+/* Werkowt — Spacing, radius, elevation, motion */
+:root {
+    /* Spacing scale (4px base) */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-20: 80px;
+    --space-24: 96px;
+  
+    /* Radius — 12px base */
+    --radius-xs: 6px;
+    --radius-sm: 8px;
+    --radius-md: 12px;    /* default: buttons, inputs, cards */
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-pill: 999px;
+  
+    /* Elevation — soft, low, editorial (never heavy) */
+    --shadow-xs: 0 1px 2px rgba(16,19,22,0.05);
+    --shadow-sm: 0 1px 3px rgba(16,19,22,0.06), 0 1px 2px rgba(16,19,22,0.04);
+    --shadow-md: 0 4px 16px rgba(16,19,22,0.07), 0 2px 4px rgba(16,19,22,0.04);
+    --shadow-lg: 0 12px 32px rgba(16,19,22,0.10), 0 4px 8px rgba(16,19,22,0.05);
+    --shadow-focus: 0 0 0 3px var(--focus-ring);
+  
+    /* Layout */
+    --container-max: 1200px;      /* @kind other */
+    --container-narrow: 760px;    /* @kind other */
+  
+    /* Motion — calm, no bounce */
+    --ease-standard: cubic-bezier(0.2, 0, 0, 1);   /* @kind other */
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);     /* @kind other */
+    --dur-fast: 120ms;   /* @kind other */
+    --dur-base: 200ms;   /* @kind other */
+    --dur-slow: 320ms;   /* @kind other */
+}  
+
+/* Werkowt — Typography tokens */
+:root {
+    --font-display: 'Schibsted Grotesk', ui-sans-serif, system-ui, sans-serif;
+    --font-sans: 'Hanken Grotesk', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-mono: 'Space Mono', ui-monospace, 'SFMono-Regular', monospace;
+  
+    /* Type scale (rem, 1rem = 16px) — editorial, generous */
+    --fs-display-xl: 4.5rem;    /* 72 — hero */
+    --fs-display-l:  3.5rem;    /* 56 */
+    --fs-display-m:  2.75rem;   /* 44 */
+    --fs-h1: 2.125rem;          /* 34 */
+    --fs-h2: 1.625rem;          /* 26 */
+    --fs-h3: 1.25rem;           /* 20 */
+    --fs-body-lg: 1.125rem;     /* 18 */
+    --fs-body: 1rem;            /* 16 */
+    --fs-sm: 0.875rem;          /* 14 */
+    --fs-xs: 0.75rem;           /* 12 */
+    --fs-eyebrow: 0.75rem;      /* 12 mono uppercase */
+  
+    /* Weights */
+    --fw-regular: 400;   /* @kind other */
+    --fw-medium: 500;    /* @kind other */
+    --fw-semibold: 600;  /* @kind other */
+    --fw-bold: 700;      /* @kind other */
+    --fw-display: 800;   /* @kind other */
+  
+    /* Line heights */
+    --lh-tight: 1.05;    /* @kind other */
+    --lh-snug: 1.2;      /* @kind other */
+    --lh-normal: 1.5;    /* @kind other */
+    --lh-relaxed: 1.65;  /* @kind other */
+  
+    /* Tracking */
+    --ls-display: -0.02em;   /* @kind other */
+    --ls-tight: -0.01em;     /* @kind other */
+    --ls-normal: 0;          /* @kind other */
+    --ls-eyebrow: 0.14em;    /* @kind other */
+  }
+  
