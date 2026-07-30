@@ -7,7 +7,7 @@ export interface BurgerMenuProps {
 
 export function BurgerMenu({ open, setOpen }: BurgerMenuProps) {
   return (
-    <div className='flex flex-col gap-1 cursor-pointer' onClick={() => setOpen(!open)}>
+    <div className='flex flex-col gap-1 cursor-pointer md:hidden z-20' onClick={() => setOpen(!open)}>
       <div
         className={`h-0.5 w-5 bg-black origin-center transition-transform ${open ? 'translate-y-1.5 rotate-45' : ''}`}
       />
