@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Header } from '@/components/Header';
 import { HeroBanner } from '@/components/HeroBanner/HeroBanner';
+import { IconGrid } from '@/components/IconGrid/IconGrid';
 
 export default function Page() {
   return <div>
@@ -9,6 +10,9 @@ export default function Page() {
     <main>
       <div className='container'>
         <HeroBanner />
+      </div>
+      <div>
+        <IconGrid />
       </div>
     </main>
   </div>;
