@@ -2,8 +2,8 @@
 @import './tokens.css';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: var(--paper);
+  --foreground: var(--ink-900);
 }
 
 html {
@@ -11,18 +11,97 @@ html {
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Fonts */
   --font-sans: var(--font-hanken-grotesk);
   --font-display: var(--font-schibsted-grotesk);
   --font-mono: var(--font-space-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* ---- Colors: neutrals ---- */
+  --color-paper: var(--paper);
+  --color-paper-sunk: var(--paper-sunk);
+  --color-white: var(--white);
+
+  --color-ink-950: var(--ink-950);
+  --color-ink-900: var(--ink-900);
+  --color-ink-700: var(--ink-700);
+  --color-ink-500: var(--ink-500);
+  --color-ink-400: var(--ink-400);
+  --color-ink-300: var(--ink-300);
+
+  --color-line-200: var(--line-200);
+  --color-line-100: var(--line-100);
+
+  /* ---- Colors: brand ---- */
+  --color-jade-50: var(--jade-50);
+  --color-jade-100: var(--jade-100);
+  --color-jade-200: var(--jade-200);
+  --color-jade-300: var(--jade-300);
+  --color-jade-500: var(--jade-500);
+  --color-jade-600: var(--jade-600);
+  --color-jade-700: var(--jade-700);
+  --color-jade-900: var(--jade-900);
+
+  --color-sand-100: var(--sand-100);
+  --color-sand-300: var(--sand-300);
+  --color-sand-500: var(--sand-500);
+
+  /* ---- Colors: semantic hues ---- */
+  --color-green-500: var(--green-500);
+  --color-amber-500: var(--amber-500);
+  --color-amber-100: var(--amber-100);
+  --color-red-500: var(--red-500);
+  --color-red-100: var(--red-100);
+  --color-blue-500: var(--blue-500);
+  --color-blue-100: var(--blue-100);
+
+  /* ---- Colors: semantic aliases ---- */
+  --color-app: var(--bg-app);
+  --color-sunk: var(--bg-sunk);
+  --color-surface-card: var(--surface-card);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-inverse: var(--surface-inverse);
+
+  --color-strong: var(--text-strong);
+  --color-muted: var(--text-muted);
+  --color-subtle: var(--text-subtle);
+  --color-on-brand: var(--text-on-brand);
+  --color-on-inverse: var(--text-on-inverse);
+  --color-link: var(--text-link);
+
+  --color-border: var(--border-default);
+  --color-border-subtle: var(--border-subtle);
+  --color-border-strong: var(--border-strong);
+  --color-border-focus: var(--border-focus);
+
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-pressed: var(--brand-pressed);
+  --color-brand-tint: var(--brand-tint);
+
+  --color-success: var(--success);
+  --color-success-tint: var(--success-tint);
+  --color-warning: var(--warning);
+  --color-warning-tint: var(--warning-tint);
+  --color-danger: var(--danger);
+  --color-danger-tint: var(--danger-tint);
+  --color-info: var(--info);
+  --color-info-tint: var(--info-tint);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* ---- Font sizes (text-*) ---- */
+  --text-display-xl: var(--fs-display-xl);
+  --text-display-l: var(--fs-display-l);
+  --text-display-m: var(--fs-display-m);
+  --text-h1: var(--fs-h1);
+  --text-h2: var(--fs-h2);
+  --text-h3: var(--fs-h3);
+  --text-body-lg: var(--fs-body-lg);
+  --text-body: var(--fs-body);
+  --text-sm: var(--fs-sm);
+  --text-xs: var(--fs-xs);
+  --text-eyebrow: var(--fs-eyebrow);
 }
 
 body {
@@ -31,7 +110,14 @@ body {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 32px;
+}
+
+.eyebrow {
+  font: 700 12px var(--font-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--jade-600);
 }
