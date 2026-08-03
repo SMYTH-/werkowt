@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export function IconGrid() {
   return (
-    <div className="border-t border-b border-line-200 bg-white py-16">
+    <div className="py-16">
       <div className="container">
         <div className="flex flex-col gap-4 max-w-[560px]">
           <p className="eyebrow">How it works</p>
