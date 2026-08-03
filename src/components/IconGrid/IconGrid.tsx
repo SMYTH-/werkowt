@@ -3,7 +3,7 @@ import Image from 'next/image';
 export function IconGrid() {
   return (
     <div className="py-16">
-      <div className="container">
+      <div>
         <div className="flex flex-col gap-4 max-w-[560px]">
           <p className="eyebrow">How it works</p>
           <h2 className="font-display text-h1 font-bold mb-10">Everything you need to run your coaching, in one place.</h2>

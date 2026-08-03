@@ -13,7 +13,7 @@ export default function Page() {
       <ContentSection container>
         <HeroBanner />
       </ContentSection>
-      <ContentSection container={false} border={{ top: true, bottom: true }} backgroundColor='white'>
+      <ContentSection container border={{ top: true, bottom: true }} backgroundColor='white'>
         <IconGrid />
       </ContentSection>
       <ContentSection container>
